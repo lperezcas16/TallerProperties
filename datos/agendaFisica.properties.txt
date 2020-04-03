@@ -1,0 +1,43 @@
+# Paises 
+agenda.paises=6
+agenda.pais1=Colombia
+agenda.pais2=Peru
+agenda.pais3=Chile
+agenda.pais4=España
+agenda.pais5=Argentina
+agenda.pais6=Mexico
+# Amigos Cercanos
+amigo.cantidad=15
+amigo.nombre1=pepe
+amigo.pais1=Colombia
+amigo.telefono1=953-456-741
+amigo.correo=correopepe@correo.com
+amigo.nombre2=yuyu
+amigo.pais2=Peru
+amigo.telefono2=895-884-663
+amigo.correo2=correoyuyu@correo.com
+amigo.nombre3=meme
+amigo.pais3=Colombia
+amigo.telefono3=222-555-612
+amigo.correo3=correomeme@correo.com
+amigo.nombre4=pepita
+amigo.pais4=Chile
+amigo.telefono4=889-557-111
+amigo.correo4=correopepita@correo.com
+# Contactos de Trabajo
+contacto.cantidad=20
+contacto.nombre1=Luisito
+contacto.empresa1=Canal Luisito Comunica
+contacto.pais1=Mexico
+contacto.telefonoManager1=987-654-321
+contacto.correo1=correoluisito@correo.com
+contacto.nombre2=Shakira
+contacto.empresa2= Shakira
+contacto.pais2=España
+contacto.telefonoManager2=987-654-321
+contacto.correo2=correoshakira@correo.com
+contacto.nombre3=Juan Pablo Jaramillo
+contacto.empresa3=YouTube
+contacto.pais3=Colombia
+contacto.telefonoManager3=456-951-753
+contacto.correo3=correojuanpablojaramillo@correo.com
