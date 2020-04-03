@@ -14,6 +14,7 @@ import java.util.Properties;
 import javax.swing.JFileChooser;
 
 public class Archivo {
+	
 	private Properties propiedades;
 	private File f;
 	private ArrayList<String> paises;
