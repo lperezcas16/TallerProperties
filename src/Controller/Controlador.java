@@ -1,14 +1,16 @@
 package Controller;
 
-import Model.Persistence.Archivo;
+import Model.Persistence.AmigoDAO;
+
 
 public class Controlador {
 
-	private Archivo archivo;
+	AmigoDAO amigo;
 	
 	public Controlador() {
 		
-		archivo = new Archivo();
+		amigo = new AmigoDAO();
+		
 	}
 	
 
