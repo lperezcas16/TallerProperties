@@ -18,7 +18,7 @@ public class PanelTrabajo extends JPanel{
 	
 	public PanelTrabajo() {
 		setLayout(null);
-		setVisible(true);
+		setVisible(false);
 		setBounds(5,5,320,305);
 		setBackground(Color.white);
 		
@@ -29,7 +29,7 @@ public class PanelTrabajo extends JPanel{
 	public void inicializarComponentes() {
 		
 		contactos_trabajo = new JLabel ("Contactos Trabajo");
-//		etiqueta_correo = new JLabel("Correo");
+		etiqueta_correo = new JLabel("Correo");
 		etiqueta_empresa= new JLabel("Empresa");
 		etiqueta_nombre= new JLabel("Nombre");
 		etiqueta_pais = new JLabel (" País");
@@ -39,29 +39,29 @@ public class PanelTrabajo extends JPanel{
 		campo_empresa=   new JTextField();
 		campo_pais =  new JTextField();
 		campo_telefono =  new JTextField();
-//		campo_correo =  new JTextField();
+		campo_correo =  new JTextField();
 		
 		campo_nombre.setBounds(80,40,230,20);
 		campo_empresa.setBounds(80,65,230,20);
 		campo_pais.setBounds(80,90,230,20);
 		campo_telefono.setBounds(120,120,190,20);
-//		campo_correo.setBounds(80,145,230,20);
+		campo_correo.setBounds(80,145,230,20);
 		
 		add(campo_nombre); 
 		add(campo_empresa);
 		add(campo_pais);
 		add(campo_telefono);
-//		add(campo_correo);
-//		
+		add(campo_correo);
+		
 		contactos_trabajo.setBounds(110,0,200,50);
-//		etiqueta_correo.setBounds(10,130,80,50);
+		etiqueta_correo.setBounds(10,130,80,50);
 		etiqueta_empresa.setBounds(10,48,80,50);
 		etiqueta_nombre.setBounds(10,25,80,50);
 		etiqueta_pais.setBounds(10,75,80,50);
 		etiqueta_telefono_manager.setBounds(10,103,150,50);
 		
 		add(contactos_trabajo);
-//		add(etiqueta_correo);
+		add(etiqueta_correo);
 		add(etiqueta_empresa);
 		add(etiqueta_nombre);
 		add(etiqueta_pais);

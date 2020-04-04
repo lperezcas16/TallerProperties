@@ -6,7 +6,7 @@ import javax.swing.*;
 
 
 // PANEL DE AMIGOS CERCANOS 
-public class Panel extends JPanel{
+public class PanelCercano extends JPanel{
 
 	/**
 	 * 
@@ -16,7 +16,7 @@ public class Panel extends JPanel{
 	public JTextField campo_nombre, campo_pais, campo_telefono, campo_correo;
 	public JButton boton_registrar;
 	
-	public Panel() {
+	public PanelCercano() {
 		
 		setLayout(null);
 		setVisible(false);
@@ -29,37 +29,37 @@ public class Panel extends JPanel{
 	public void inicializarComponentes(){
 		
 		amigos_cercanos= new JLabel("Amigos Cercanos");
-//		etiqueta_correo = new JLabel("Correo");
+		etiqueta_correo = new JLabel("Correo");
 		etiqueta_nombre = new JLabel("Nombre");
 		etiqueta_pais =new JLabel("Pais");
 		etiqueta_telefono = new JLabel("Teléfono");
 		boton_registrar = new JButton("Registrar");
 		
-//		campo_correo = new JTextField();
+		campo_correo = new JTextField();
 		campo_nombre = new JTextField();
 		campo_pais = new JTextField();
 		campo_telefono = new JTextField();
 		
 		amigos_cercanos.setBounds(110,0,200,50);
-//		etiqueta_correo.setBounds(10,45,80,50);
+		etiqueta_correo.setBounds(10,50,80,50);
 		etiqueta_nombre.setBounds(10,25,80,50);
-		etiqueta_pais.setBounds(10,65,80,50);
+		etiqueta_pais.setBounds(10,75,80,50);
 		etiqueta_telefono.setBounds(10,105,80,50);
 		
 		boton_registrar.setBounds(115,165,90,20);
 		
-//		campo_correo.setBounds(80,65,200,20);
+		campo_correo.setBounds(80,65,200,20);
 		campo_nombre.setBounds(80,40,200,20);
-		campo_pais.setBounds(80,80,200,20);
+		campo_pais.setBounds(80,90,200,20);
 		campo_telefono.setBounds(80,120,200,20);
 		
 		add(amigos_cercanos);
-//		add(etiqueta_correo);
+		add(etiqueta_correo);
 		add(etiqueta_nombre);
 		add(etiqueta_pais);
 		add(etiqueta_telefono);
 		add(boton_registrar);
-//		add(campo_correo);
+		add(campo_correo);
 		add(campo_nombre);
 		add(campo_pais);
 		add(campo_telefono);

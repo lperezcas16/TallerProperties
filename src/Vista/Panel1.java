@@ -18,7 +18,7 @@ public class Panel1 extends JPanel {
 	public Panel1(){
 		
 		setLayout(null);
-		setVisible(false);
+		setVisible(true);
 		setBounds(5,5,320,305);
 		setBackground(Color.white);
 		
@@ -37,5 +37,4 @@ public class Panel1 extends JPanel {
 		add(boton_amigos);
 		add(boton_trabajo);
 	}
-
 }

@@ -116,11 +116,11 @@ public class AmigoDAO {
 
 	public boolean agregarContactoCercano(String nombre, String pais, String telefono, String correo,
 			ArrayList<Cercano> cercano) {
-
+		
 		Cercano aux = new Cercano(nombre, pais, telefono,correo);
 
-		if (buscarContactoCercano(correo, amigos) == null) {
-			amigos.add(aux);
+		if (buscarContactoCercano(correo, cercano) == null) {
+			cercano.add(aux);
 			archiv.escribirArchivoCercano(cercano);
 			return true;
 		} else {
@@ -133,7 +133,7 @@ public class AmigoDAO {
 
 		Trabajo aux = new Trabajo(nombre,empresa, pais, telefono,correo);
 
-		if (buscarContactoCercano(correo, amigos) == null) {
+		if (buscarContactoTrabajo(correo, trabajo) == null) {
 			trabajo.add(aux);
 			archiv.escribirArchivoTrabajo(trabajo);
 			return true;
@@ -174,6 +174,7 @@ public class AmigoDAO {
 		}
 
 	}
+	
 	
 	
 	
