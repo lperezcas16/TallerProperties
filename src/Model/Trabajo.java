@@ -11,8 +11,8 @@ public class Trabajo extends Amigo  {
 	}
 
 
-	public Trabajo(String nombre, String pais, String correo,
-						String empresa, String telefono_manager) {
+	public Trabajo(String nombre,String empresa, String pais, String telefono_manager,String correo
+						 ) {
 		super(nombre, pais, correo);
 	this.empresa = empresa;
 	this.telefono_manager = telefono_manager;

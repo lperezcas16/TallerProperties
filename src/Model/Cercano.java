@@ -13,8 +13,8 @@ public class Cercano extends Amigo {
 
 	@Override
 	public String toString() {
-		return "Amigos cercanos  Nombre: "  + getNombre() +" Pais "+  getPais() + " Telefono "  
-									+ getTelefono()+ pais + " Correo " + getCorreo() ;
+		return "Amigos cercanos  Nombre: "  + getNombre() +" Pais: "+  getPais() + " Telefono: "  
+									+ getTelefono() + " Correo: " + getCorreo() ;
 	}
 
 

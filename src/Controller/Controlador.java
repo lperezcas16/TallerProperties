@@ -1,6 +1,6 @@
 package Controller;
 
-import Model.Archivo;
+import Model.Persistence.Archivo;
 
 public class Controlador {
 
