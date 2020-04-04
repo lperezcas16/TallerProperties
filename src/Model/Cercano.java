@@ -1,10 +1,13 @@
 package Model;
 
-public class Cercano extends Amigo {
+import java.io.Serializable;
+
+public class Cercano extends Amigo implements Serializable{
+	private static final long serialVersionUID = 1L;
 	
 	String telefono;
 	
-	public Cercano(String nombre, String pais, String correo, String telefono) {
+	public Cercano(String nombre, String pais,  String telefono,String correo) {
 		super(nombre, pais, correo);
 	this.telefono = telefono;
 	}

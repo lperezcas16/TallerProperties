@@ -1,6 +1,9 @@
 package Model;
 
-public class Trabajo extends Amigo  {
+import java.io.Serializable;
+
+public class Trabajo extends Amigo implements Serializable {
+	private static final long serialVersionUID = 1L;
 
 	String empresa, telefono_manager;
 	

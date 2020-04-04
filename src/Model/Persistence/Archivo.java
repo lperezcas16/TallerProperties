@@ -9,7 +9,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Properties;
+
 
 import Model.Amigo;
 import Model.Cercano;
@@ -45,6 +45,24 @@ public class Archivo {
 			salida = new ObjectOutputStream(new FileOutputStream(archivo));
 			salida.writeObject(paises);
 			salida.writeObject(amigos);
+			salida.writeObject(trabajo);
+			salida.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public void escribirArchivoCercano(ArrayList<Cercano> amigos) {
+		try {
+			salida = new ObjectOutputStream(new FileOutputStream(archivo));
+			salida.writeObject(amigos);
+			salida.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	public void escribirArchivoTrabajo(ArrayList<Trabajo> trabajo) {
+		try {
+			salida = new ObjectOutputStream(new FileOutputStream(archivo));
 			salida.writeObject(trabajo);
 			salida.close();
 		} catch (IOException e) {

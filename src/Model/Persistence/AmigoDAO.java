@@ -2,13 +2,16 @@ package Model.Persistence;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
 import javax.swing.JFileChooser;
 
+
 import Model.Cercano;
 import Model.Trabajo;
+
 
 public class AmigoDAO {
 	private Archivo archiv = new Archivo();
@@ -36,9 +39,10 @@ public class AmigoDAO {
 			propiedades = new Properties();
 			propiedades.load(archivo);
 			archivo.close();
+
 			int cantidad_paises = Integer.parseInt(propiedades.getProperty("agenda.paises"));
 			System.out.println(cantidad_paises);
-			for (int i = 0; i <= cantidad_paises; i++) {
+			for (int i = 1; i <= cantidad_paises; i++) {
 				paises.add(propiedades.getProperty("agenda.pais" + i));
 			}
 			for (int i = 0; i < paises.size(); i++) {
@@ -51,7 +55,7 @@ public class AmigoDAO {
 				String n = propiedades.getProperty("amigo.nombre" + i);
 				String p = propiedades.getProperty("amigo.pais" + i);
 				String t = propiedades.getProperty("amigo.telefono" + i);
-				String c = propiedades.getProperty("amigos.correo" + i);
+				String c = propiedades.getProperty("amigo.correo" + i);
 				Cercano aux = new Cercano(n, p, t, c);
 				amigos.add(aux);
 			}
@@ -82,6 +86,105 @@ public class AmigoDAO {
 		}
 
 	}
+
+	public Cercano buscarContactoCercano(String correo, ArrayList<Cercano> cercano) {
+		Cercano encontrado = null;
+		if (!cercano.isEmpty()) {
+			for (int i = 0; i < cercano.size(); i++) {
+				if (cercano.get(i).getCorreo().equals(correo)) {
+					encontrado = cercano.get(i);
+				}
+			}
+		}
+
+		return encontrado;
+	}
+	public Trabajo buscarContactoTrabajo(String correo, ArrayList<Trabajo> trabajo) {
+		Trabajo encontrado = null;
+		if (!trabajo.isEmpty()) {
+			for (int i = 0; i < trabajo.size(); i++) {
+				if (trabajo.get(i).getCorreo().equals(correo)) {
+					encontrado = trabajo.get(i);
+				}
+			}
+		}
+
+		return encontrado;
+	}
+
+	
+
+	public boolean agregarContactoCercano(String nombre, String pais, String telefono, String correo,
+			ArrayList<Cercano> cercano) {
+
+		Cercano aux = new Cercano(nombre, pais, telefono,correo);
+
+		if (buscarContactoCercano(correo, amigos) == null) {
+			amigos.add(aux);
+			archiv.escribirArchivoCercano(cercano);
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+	public boolean agregarContactoTrabajo(String nombre, String empresa,String pais, String telefono, String correo,
+			ArrayList<Trabajo> trabajo) {
+
+		Trabajo aux = new Trabajo(nombre,empresa, pais, telefono,correo);
+
+		if (buscarContactoCercano(correo, amigos) == null) {
+			trabajo.add(aux);
+			archiv.escribirArchivoTrabajo(trabajo);
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+	
+	public boolean eliminarContactoCercano(String correo, ArrayList<Cercano> cercano) {
+		try {
+			Cercano e = buscarContactoCercano(correo, cercano);
+			cercano.remove(e);
+			archiv.getArchivo().delete();
+			archiv.getArchivo().createNewFile();
+			archiv.escribirArchivoCercano(cercano);
+			return true;
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return false;
+		}
+
+	}
+	
+	public boolean eliminarContactoTrabajo(String correo, ArrayList<Trabajo> trabajo) {
+		try {
+			Trabajo e = buscarContactoTrabajo(correo, trabajo);
+			trabajo.remove(e);
+			archiv.getArchivo().delete();
+			archiv.getArchivo().createNewFile();
+			archiv.escribirArchivoTrabajo(trabajo);
+			return true;
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+			return false;
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	public Properties getPropiedades() {
 		return propiedades;
