@@ -125,7 +125,8 @@ public class Controlador implements ActionListener {
 			ventana.panel_correoc.setVisible(false);
 			ventana.panel_correot.setVisible(false);
 			ventana.panel_trabajo.setVisible(false);
-			ventana.panel.setVisible(false);
+			ventana.panel.setVisible(false); 
+			//hola
 		}
 
 	}

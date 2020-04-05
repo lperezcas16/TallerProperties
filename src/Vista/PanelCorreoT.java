@@ -16,6 +16,7 @@ public class PanelCorreoT extends JPanel{
 	/**
 	 * 
 	 */
+	//hola
 	
 	public JLabel etiqueta;
 	public JTextField campo_correot;
