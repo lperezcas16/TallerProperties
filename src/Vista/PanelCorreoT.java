@@ -20,7 +20,7 @@ public class PanelCorreoT extends JPanel{
 	
 	public JLabel etiqueta;
 	public JTextField campo_correot;
-	public JButton boton_añadir1, boton_eliminar, boton_modificar;
+	public JButton  boton_añadir1, boton_eliminar, boton_modificar;
 	
 	public PanelCorreoT() {
 		
